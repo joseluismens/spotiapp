@@ -1,7 +1,7 @@
 <div class="row mx-auto">
 
     <div (click)="verArtista(item)" class="card m-1 puntero" style="width: 24%;" *ngFor="let item of items">
-        <img class="card-img-top" [src]="item.images[0].url" alt="Card image cap">
+        <img class="card-img-top" [src]="item.images | noimage" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{item.name}}</h5>
             <p class="card-text">
