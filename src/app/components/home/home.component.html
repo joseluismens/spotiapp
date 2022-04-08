@@ -1,15 +1,6 @@
-<div class="row mx-auto">
-    <div class="card m-1" style="width: 24%;" *ngFor="let cancion of nuevasCanciones">
-        <img class="card-img-top" [src]="cancion.images[0].url" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">{{cancion.name}}</h5>
-            <p class="card-text">
-                <span *ngFor="let artista of cancion.artists" class="badge rounded-pill bg-primary m-1">
-                    {{artista.name}}
-                </span>
+    <app-loading *ngIf="loading"></app-loading>
 
-            </p>
-          
-        </div>
-    </div>
-</div>
+
+    
+    <app-tarjetas [items]="nuevasCanciones"></app-tarjetas>
+    
